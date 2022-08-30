@@ -9,7 +9,8 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 ## Use this template
 
 Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
-# Project Name
+
+## Project Name
 
 **Author**: Hanbyeol Lee, Adrian Halverson
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
@@ -29,8 +30,10 @@ Clone this repo to your own account with the green "Use this template" button. T
 01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
 
 ## Estimates
+
 4 hours each day
 
 ## Credit and Collaborations
+
 Team agreement: 1800 - 2200
 Working with Adrian Halverson
