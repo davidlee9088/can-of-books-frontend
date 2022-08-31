@@ -13,7 +13,7 @@ Clone this repo to your own account with the green "Use this template" button. T
 ## Can-Of-Books
 
 **Author**: Hanbyeol Lee, Adrian Halverson
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 2.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 Being able to produce books that are our favorite using REACT, and REAR Servers.
@@ -27,6 +27,7 @@ Javascript was used. Rear server API and Front server API connected
 ## Change Log
 
 08-29-2001 6:30pm - Application now has a fully-functional express server, connected to rear, and created nav bar using Home and about.
+30Aug22 We established a way to delete and add books from the front end into our database.
 
 ## Estimates
 
