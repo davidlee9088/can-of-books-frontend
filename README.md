@@ -1,19 +1,8 @@
-# Start your own "Can of Books" App
-
-This repository has starter code to begin work on creating your own online bookshelf.
-
-## What can books do?
-
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
-
-## Use this template
-
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
 
 ## Can-Of-Books
 
 **Author**: Hanbyeol Lee, Adrian Halverson
-**Version**: 2.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 3.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 Being able to produce books that are our favorite using REACT, and REAR Servers.
@@ -28,6 +17,7 @@ Javascript was used. Rear server API and Front server API connected
 
 08-29-2001 6:30pm - Application now has a fully-functional express server, connected to rear, and created nav bar using Home and about.
 30Aug22 We established a way to delete and add books from the front end into our database.
+31Aug22 We established a way to delete and add books from up user input. We have used server and inputting the user value to rerender the books.
 
 ## Estimates
 
@@ -38,12 +28,12 @@ Javascript was used. Rear server API and Front server API connected
 Team agreement: 1800 - 2200
 Working with Adrian Halverson
 
-Name of feature: Connecting Rear and Front, About us, Home page switching screen
+Name of feature: Deleting the old information, and updating the books on User input using the server
 
 Estimate of time needed to complete: 4 hours
 
-Start time: 1700
+Start time: 1330
 
-Finish time: 1830
+Finish time: 1600
 
-Actual time needed to complete: 1 hour 30 mins
+Actual time needed to complete: 2 hour 30 mins

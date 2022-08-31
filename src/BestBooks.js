@@ -4,12 +4,19 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import UpdateBooks from './UpdateBooks';
 
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
+      showModal: false,
+      bookToUpdate: {
+        title:'',
+        description:'',
+        status:''
+      }
     }
   }
   getBooks = async () => {
@@ -44,8 +51,33 @@ deleteBooks = async (id) => {    let url = `${process.env.REACT_APP_SERVER}/book
     this.renderCards();
 }
 
+updateBooks = async (updatedBooks) => {
+  try {
+    let url = `${process.env.REACT_APP_SERVER}/books/${updatedBooks._id}`;
+    let updatedBooksfromDB = await axios.put(url, updatedBooks);
+    let updatedBooksArr = this.state.books.map(existingBooks => {
+      return existingBooks._id === updatedBooks._id
+        ? updatedBooksfromDB.data
+        : existingBooks;
+    });
+    this.setState({books: updatedBooksArr})
 
-
+  } catch (err) {
+    console.log('We have an error: ', err.response.data);
+  }
+}
+handleModal = (books) => {
+  console.log(books)
+    this.setState({
+      bookToUpdate: books,
+      showModal: true,
+    })
+}
+handleModalClose = () => {
+  this.setState({
+    showModal: false
+  })
+}
   componentDidMount() {
     this.getBooks();
   }
@@ -61,6 +93,7 @@ deleteBooks = async (id) => {    let url = `${process.env.REACT_APP_SERVER}/book
         {books.status}
         </Card.Text>
         <Button onClick={ () => this.deleteBooks(books._id)}>delete</Button>
+        <Button onClick={() => this.handleModal(books)}>Update Book</Button>
         </Card.Body>
       </Card>)})
     return renderedCarousel;
@@ -89,6 +122,11 @@ deleteBooks = async (id) => {    let url = `${process.env.REACT_APP_SERVER}/book
             <Button type="submit">Submit</Button>
           </Form>
         </Container>
+        <UpdateBooks
+        showModal={this.state.showModal}
+        book={this.state.bookToUpdate}
+        updateBooks={this.updateBooks}
+        handleModalClose={this.handleModalClose}/>
       </>
     )
   }
